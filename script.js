@@ -9,25 +9,25 @@
     let countdown;
     let totalTime = 0;
     let remainingTime = 0;
-    let isPaused = false; // For pause functionality
+    let isPaused = false; 
 
     startBtn.addEventListener('click', () => {
         let userTime = minutesInput.value;
-        if (userTime !== null && userTime > 0 && !countdown) { // Prevent multiple clicks
+        if (userTime !== null && userTime > 0 && !countdown) { 
             totalTime = parseInt(userTime) * 60;
             remainingTime = totalTime;
             startTimer();
-            startBtn.disabled = true; // Disable start button after it's clicked
+            startBtn.disabled = true; 
         }
     });
 
     pauseBtn.addEventListener('click', () => {
         if (isPaused) {
-            startTimer(); // Resume the timer
+            startTimer(); 
             pauseBtn.textContent = 'Pause';
             isPaused = false;
         } else {
-            clearInterval(countdown); // Pause the timer
+            clearInterval(countdown); 
             pauseBtn.textContent = 'Resume';
             isPaused = true;
         }
@@ -43,9 +43,9 @@
                 updateCircle();
             } else {
                 clearInterval(countdown);
-                playAlarm();  // Play alarm when time runs out
+                playAlarm();  
             }
-        }, 1000);
+        }, 5000);
     }
 
     function updateDisplay() {
@@ -64,16 +64,16 @@
 
     function playAlarm() {
         alarmSound.play();
-        // Stop the alarm after 5 seconds
+        
         setTimeout(() => {
             alarmSound.pause();
-            alarmSound.currentTime = 0; // Reset the audio to the beginning
-        }, 5000); // Stop after 5 seconds
+            alarmSound.currentTime = 0; 
+        }, 10000); 
     }
 
     function resetTimer() {
         clearInterval(countdown);
-        countdown = null; // Reset countdown to prevent multiple start clicks
+        countdown = null; 
         remainingTime = 0;
         totalTime = 0;
         isPaused = false;
@@ -82,7 +82,7 @@
             'conic-gradient(#00f 0deg, transparent 0deg)';
         minutesInput.value = '';
         pauseBtn.textContent = 'Pause';
-        startBtn.disabled = false; // Enable start button again
-        alarmSound.pause(); // Stop the alarm if it's still playing
-        alarmSound.currentTime = 0; // Reset the audio to the beginning
+        startBtn.disabled = false; 
+        alarmSound.pause(); 
+        alarmSound.currentTime = 0; 
     }
