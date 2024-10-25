@@ -58,3 +58,52 @@
     border-radius: 50%;
     background-color: #121212;
 }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+}
+
+.timer-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid #00f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#00f 0deg, transparent 0deg);
+}
+
+.time-display {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}

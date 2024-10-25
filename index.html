@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="timer-container">
-        <div class="timer-circle">
-            <span class="time-display">00:00</span>
-        </div>
-        <div class="controls">
-            <input type="number" id="minutes-input" placeholder="Enter minutes">
-            <button class="start-btn">Start</button>
-            <button class="reset-btn">Reset</button>
-        </div>
-        <audio id="alarm-sound" src="path-to-alarm-sound.mp3"></audio>
+    <div class="timer-circle">
+        <span class="time-display">00:00</span>
     </div>
+
+    <div class="controls">
+        <input id="minutes-input" type="number" placeholder="Enter minutes">
+        <button class="start-btn">Start</button>
+        <button class="pause-btn">Pause</button>
+        <button class="reset-btn">Reset</button>
+    </div>
+    <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
     
     
     <script src="./script.js"></script>
