@@ -1,0 +1,60 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.timer-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular shape */
+    border: 10px solid transparent; /* Transparent to allow gradient effect */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#00f 0deg, transparent 0deg); /* Background is used for the circular fill */
+}
+
+.time-display {
+    font-size: 32px;
+    color: white;
+    z-index: 1;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+#minutes-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.start-btn, .reset-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #00f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.start-btn:hover, .reset-btn:hover {
+    background-color: #009;
+}
+
+.timer-circle:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background-color: #121212;
+}
